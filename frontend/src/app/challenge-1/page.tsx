@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -17,8 +19,9 @@ export default function Challenge1() {
   }, []);
 
   return (
-    <div>
-      <h1>Users</h1>
+    <div className='p-10 flex flex-col justify-center gap-5'>
+      <h1 className='text-center'>Challenge 1</h1>
+      <h2 className='text-center'>Users</h2>
       <ul>
         {users.map(u => <li key={u.id}>{u.name} ({u.email})</li>)}
       </ul>
